@@ -1,0 +1,14 @@
+services:
+  blockchain:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: blockchain
+    ports:
+      - 5000:5000
+    volumes:
+      - ./:/app
+    stdin_open: true
+    tty: true
+version:
+  '3.8'
