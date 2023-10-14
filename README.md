@@ -19,30 +19,41 @@ The server will listen on `http://localhost:5000`.
 
 There is different routes to interact with the blockchain :
 
-- `/mine_block` : Mine a block
+- **POST** `/mine_block`: Mine a block
+![Mine block](./images/mine_block_body.png)
 ![Mine block](./images/mine_block.png)
 
 
-- `/get_chain` : returns all the blocks of the blockchain
+- **GET** `/get_chain` : returns all the blocks of the blockchain
 ![Get chain](./images/get_chain.png)
 
 
-- `/valid` : Checks if the blockchain is valid
+- **GET** `/valid` : Checks if the blockchain is valid
 ![Valid](./images/valid.png)
 
 
-- `/create-fake-block` : Create a fake non-valid block
+- **GET** `/create-fake-block` : Create a fake non-valid block
 ![Create fake block](./images/create-fake-block.png)
+
+- **GET** `/peers` : Show number of peers
+![Peers](./images/peers.png)
 
 ## MCL
 
 **MCL** library and his python wrapper is installed by default in the docker container. 
+
+For testing if the library is successfully installed, run this command :
+
+```bash
+cd /app/mcl && chmod +x tests.sh && ./tests.sh
+```
 
 Before importing something from the library, you need to set this code :
 ```python
 import sys
 sys.path.insert(1, "/lib/mcl-python/")
 ```
+
 
 ## Development
 
@@ -55,5 +66,5 @@ docker compose restart
 To see container logs, type :
 
 ```bash
-docker compose logs
+docker compose logs -f blockchain
 ```
