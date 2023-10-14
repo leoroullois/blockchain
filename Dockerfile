@@ -9,9 +9,11 @@ RUN apk add --no-cache \
     make \
     cmake \
     g++ \
+    gcc \
     vim \
     curl \
-    bash
+    bash \
+    gmp-dev
 
 WORKDIR /app
 COPY . .
