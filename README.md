@@ -20,22 +20,32 @@ The server will listen on `http://localhost:5000`.
 There is different routes to interact with the blockchain :
 
 - **POST** `/mine_block`: Mine a block
+
+
 ![Mine block](./images/mine_block_body.png)
 ![Mine block](./images/mine_block.png)
 
 
 - **GET** `/get_chain` : returns all the blocks of the blockchain
+
+
 ![Get chain](./images/get_chain.png)
 
 
 - **GET** `/valid` : Checks if the blockchain is valid
+
+
 ![Valid](./images/valid.png)
 
 
 - **GET** `/create-fake-block` : Create a fake non-valid block
+
+
 ![Create fake block](./images/create-fake-block.png)
 
 - **GET** `/peers` : Show number of peers
+
+
 ![Peers](./images/peers.png)
 
 ## MCL
