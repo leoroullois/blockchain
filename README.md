@@ -52,7 +52,13 @@ There is different routes to interact with the blockchain :
 
 **MCL** library and his python wrapper is installed by default in the docker container. 
 
-For testing if the library is successfully installed, run this command :
+For testing if the library is successfully installed, first get a shell inside the container :
+
+```bash
+docker compose exec -ti blockchain /bin/bash
+```
+
+Then, run this command :
 
 ```bash
 cd /app/mcl && chmod +x tests.sh && ./tests.sh
